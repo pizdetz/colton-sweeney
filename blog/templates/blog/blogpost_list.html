@@ -1,0 +1,30 @@
+{% extends 'base_generic.html' %}
+
+{% block nav %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li class="active"><a href="{% url 'blog' %}">Blog <span class="sr-only">(current)</span></a></li>
+<li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="jumbotron text-center">
+            <h1>Blog</h1>
+        </div>
+    </div>
+
+    {% if blogpost_list %}
+    <ul class="blog-posts well">
+        {% for post in blogpost_list %}
+        <div class="well">
+        <li><a href="{% url 'post' post.id %}">{{post.title}}</a></li>
+        <p>by {{post.author}} on {{post.date}}</p>
+        <p>{{post.post|slice:":300"}}...</p>
+        </div>
+        <hr>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No blog posts to display</p>
+    {% endif %}
+{% endblock %}

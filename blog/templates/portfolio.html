@@ -1,0 +1,41 @@
+{% extends 'base_generic.html' %}
+
+{% block nav %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'blog' %}">Blog</a></li>
+<li class="active"><a href="{% url 'portfolio' %}">Portfolio <span class="sr-only">(current)</span></a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="jumbotron text-center">
+            <h1>Portfolio</h1>
+        </div>
+    </div>
+    <p>
+        Hello, my name is Colton Sweeney. I'm a 19-year-old software developer and web designer living in Raleigh, NC. 
+        I enjoy music and hiking outdoors, but most of all I love to script in my free time. I've created a variety of 
+        bots over the past couple of years to accomplish a number of tasks, some of which I'll present here. In the meantime, 
+        this website will serve as an ever-growing placeholder for my past, current, and future accomplishments. As I continue 
+        to chisel and hone my web development skills, this website should begin to reflect that.
+    </p>
+    <br>
+    <p>
+        This website is coded entirely using in Python using the Django Web Development Framework. Pages are rendered using 
+        HTML, CSS, JavaScript, and Django's templating engine. At the time of writing this, I'm still fairly new to Django. 
+        I've only hustled through 3 tutorials and have played around with it on a few instances. I just, however, finished 
+        the Mozilla Developer Network tutorial, and felt confident enough in my abilities to create my own Django instance for 
+        my own purpose. I've been meaning to create a personal portfolio website for myself for a long while, and I figure that 
+        this is the perfect chance.
+    </p>
+    <br>
+    <p>
+        I have experience in quite a few programming languages and frameworks, including C, C++, C#, Java, Swift, Python, node.js, 
+        React.js, Express, and Meteor (to name a few.) As far as applications go, I've coded programs from calculators to mobile 
+        applications. For mobile development on iOS, I used Swift with Xcode v8. For mobile development on Android, I used Java with 
+        Eclipse IDE and the Android SDK. For mobile development, I've mostly dabbled with JavaScript and Python frameworks. So Django 
+        (Python), Express (JS), Meteor (JS), React (JS), node (JS), etc. I have dove into the web development side in only the past year 
+        of my software career, so my experience and skills are still limited (as you can see from this site.) Over time, I hope for this 
+        site to become a statement of my achievements thus far.
+    </p>
+{% endblock %}
